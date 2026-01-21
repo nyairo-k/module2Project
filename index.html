@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Online Dictionary</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+
+    <!-- Trigger for the hidden feature -->
+    <button id="toggleSaved" class="view-saved-trigger">Saved Index</button>
+
+    <div id="app">
+        <!-- Header section -->
+        <header class="app-header">
+            <h1 class="logo">📚 Wordly</h1>
+            <p class="tagline">Search, learn, and save your favorite words</p>
+        </header>
+
+        <!-- Logic Section -->
+        <section class="search-action">
+            <form id="searchForm">
+                <input 
+                    type="text" 
+                    id="wordInput" 
+                    name="word" 
+                    placeholder="Search for a term..." 
+                    required>
+                <button type="submit">Search</button>
+            </form>
+        </section>
+
+        <!-- Results section -->
+        <section class="results-section">
+            <div id="results-card">
+                <!-- To be appended by js-->
+               
+            </div>
+        </section>
+
+        <!-- Section for error handling -->
+        <section class="error-section" id="errorSection">
+            <p class="error-message"></p>
+        </section>
+
+        <!-- Hidden Sidebar (The Saved Feature) -->
+        <section class="saved-section" id="savedSection">
+            <div class="saved-header">
+                <h2>Saved Index</h2>
+                <button id="closeSaved" aria-label="Close Index">✕</button>
+            </div>
+            <ul id="savedWordsList">
+                <!-- To be appended by js-->
+            </ul>
+        </section>
+    </div>
+
+</body>
+</html>
